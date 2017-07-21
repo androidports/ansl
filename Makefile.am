@@ -1,4 +1,4 @@
 
 lib_LIBRARIES=libandroid_native_support.a
-libandroid_native_support_a_SOURCES=wchar.c
+libandroid_native_support_a_SOURCES=wchar.c locale.c
 
