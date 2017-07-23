@@ -1,5 +1,5 @@
 
-lib_LIBRARIES=libandroid_native_support.a libpthread.a
-libandroid_native_support_a_SOURCES=wchar.c locale.c
+lib_LIBRARIES=libansl.a libpthread.a
+libansl_a_SOURCES=wchar.c locale.c
 libpthread_a_SOURCES=pthread.c
 

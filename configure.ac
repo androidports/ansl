@@ -2,8 +2,8 @@
 # Process this file with autoconf to produce a configure script.
 
 AC_PREREQ([2.69])
-AC_INIT([android_native_support], [1.0], [androidports@users.noreply.github.com])
-AM_INIT_AUTOMAKE(android_native_support, 1.0)
+AC_INIT([ansl], [1.0], [androidports@users.noreply.github.com])
+AM_INIT_AUTOMAKE(ansl, 1.0)
 AC_CONFIG_SRCDIR([wchar.c])
 AC_CONFIG_HEADERS([config.h])
 
