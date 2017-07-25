@@ -37,8 +37,6 @@ static pthread_once_t g_once = PTHREAD_ONCE_INIT;
 static pthread_mutex_t g_lock = PTHREAD_MUTEX_INITIALIZER;
 const char kFplUtilPrintVersionString[] = FPLUTIL_VERSION_STRING;
 
-extern void AndroidPrintfCxxInit();
-
 ///////////////////////////////////////////////////////////////////////////
 // Wrappers for stdio calls.
 //
@@ -108,7 +106,6 @@ static void AndroidPrintfCleanup() {
 static void AndroidPrintfInit() {
   SetAndroidLogWrapperBufferSize(DEFAULT_BUFSIZE);
   pthread_mutex_lock(&g_lock);
-  AndroidPrintfCxxInit();
   atexit(AndroidPrintfCleanup);
   pthread_mutex_unlock(&g_lock);
 }
