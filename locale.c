@@ -3,6 +3,8 @@
 #include <locale.h>
 #include <limits.h>
 
+char* __real_setlocale(int, const char*);
+
 static struct lconv* g_lconv = NULL;
 
 struct lconv* localeconv(void) {
@@ -13,3 +15,12 @@ struct lconv* localeconv(void) {
     }
     return g_lconv;
 }
+
+char* __wrap_setlocale(int category, const char* locale) {
+    char* ret = __real_setlocale(category, locale);
+    if (!ret) {
+        ret = getenv("LANG");
+    }
+    return ret;
+}
+
