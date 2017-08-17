@@ -7,7 +7,7 @@ char* __real_setlocale(int, const char*);
 
 static struct lconv* g_lconv = NULL;
 
-struct lconv* localeconv(void) {
+struct lconv* __wrap_localeconv(void) {
     if (!g_lconv) {
         g_lconv = malloc(sizeof(struct lconv));
         struct lconv l = { ".", "", "", "", "", "", "", "", "", "", UCHAR_MAX, UCHAR_MAX, UCHAR_MAX, UCHAR_MAX, UCHAR_MAX, UCHAR_MAX, UCHAR_MAX, UCHAR_MAX, UCHAR_MAX, UCHAR_MAX, UCHAR_MAX, UCHAR_MAX, UCHAR_MAX, UCHAR_MAX };
