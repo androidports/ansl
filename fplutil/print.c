@@ -18,6 +18,7 @@
 #include <pthread.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 #include <sys/uio.h>
 #include "fplutil/print.h"
 #include "fplutil/version.h"
