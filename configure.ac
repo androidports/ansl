@@ -31,6 +31,7 @@ AM_CONDITIONAL([ENABLE_SEM],[test x$enable_sem = xyes])
 
 # Checks for programs.
 AC_PROG_CC
+AM_PROG_AR
 AC_PROG_RANLIB
 
 # Checks for libraries.
